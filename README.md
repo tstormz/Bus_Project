@@ -5,10 +5,10 @@ CSC 380 Team project
 Functionality
 ----------------------------------------
   Map with:
-    Bus stop locations
-    Your location
-    Current bus location if possible
-    Colored bus routes
+    -Bus stop locations
+    -Your location
+    -Current bus location if possible
+    -Colored bus routes
     
     View static bus schedules
 
