@@ -3,7 +3,7 @@ CSC 380 Team project
 
 Functionality
 -----------------------------------
-Map with:
+Map with
  Bus stop locations
  Your location
  Current bus location if possible
