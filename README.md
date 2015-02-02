@@ -18,4 +18,3 @@ Save favorite bus stops
 Find nearest bus stops
 
 Bus Arrival/Departure Alert
------------------------------------
