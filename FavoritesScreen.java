@@ -12,12 +12,12 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link secondNuke.OnFragmentInteractionListener} interface
+ * {@link FavoritesScreen.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link secondNuke#newInstance} factory method to
+ * Use the {@link FavoritesScreen#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class secondNuke extends Fragment {
+public class FavoritesScreen extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -35,11 +35,11 @@ public class secondNuke extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment secondNuke.
+     * @return A new instance of fragment FavoritesScreen.
      */
     // TODO: Rename and change types and number of parameters
-    public static secondNuke newInstance(String param1, String param2) {
-        secondNuke fragment = new secondNuke();
+    public static FavoritesScreen newInstance(String param1, String param2) {
+        FavoritesScreen fragment = new FavoritesScreen();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -47,7 +47,7 @@ public class secondNuke extends Fragment {
         return fragment;
     }
 
-    public secondNuke() {
+    public FavoritesScreen() {
         // Required empty public constructor
     }
 
@@ -64,7 +64,7 @@ public class secondNuke extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.schedules_screen, container, false);
+        return inflater.inflate(R.layout.favorites_screen, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

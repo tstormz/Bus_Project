@@ -38,19 +38,26 @@ public class HomeScreen extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void launchN(View view){
+    public void launchHome(View view){
+        setContentView(R.layout.activity_home_screen);
+    }
+
+    public void launchSchedulesScreen(View view){
+        setContentView(R.layout.activity_schedules_screen);
+    }
+
+    public void launchNStopScreen(View view){
+        setContentView(R.layout.nearest_stop_screen);
+    }
+
+    public void launchMapScreen(View view){
         setContentView(R.layout.map_screen);
     }
 
-    public void newLaunch(View view){
-        setContentView(R.layout.schedules_screen);
+    public void launchFavoritesScreen(View view){
+        setContentView(R.layout.favorites_screen);
     }
 
-    public void changeImage(View view){
-        ImageView img;
-        img = (ImageView) findViewById(R.id.imageView);
-        img.setImageResource(R.drawable.zergrush);
-    }
 
 
 }
