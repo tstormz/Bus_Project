@@ -87,15 +87,9 @@ public class BusRoute {
             Scanner sc = new Scanner(w.s);
             while (sc.hasNext()) {
                 String line = sc.nextLine();
-                if (line.substring(0,5).equals("route")) {
-                    if (!routeName.equals(line.substring(5))) {
-                        while (!sc.nextLine().equals("--")){}
-                    }
-                } else {
-                    String[] params = line.split(",");
-                    LatLng coordinates = new LatLng(Double.parseDouble(params[1]),Double.parseDouble(params[2]));
-                    busStops.add(new BusStop(params[0],coordinates));
-                }
+                String[] params = line.split(",");
+                LatLng coordinates = new LatLng(Double.parseDouble(params[1]),Double.parseDouble(params[2]));
+                busStops.add(new BusStop(params[0],coordinates));
             }
             for (BusStop stop : getBusStops()) {
                 w.map.addMarker(new MarkerOptions()
@@ -109,7 +103,7 @@ public class BusRoute {
 
     public class HttpConnection {
         public String readUrl(String xmlUrl) throws IOException {
-            String data = "";
+            String data = "", color = "";
             InputStream iStream = null;
             HttpURLConnection urlConnection = null;
             try {
@@ -122,7 +116,11 @@ public class BusRoute {
                 StringBuffer sb = new StringBuffer();
                 String line = "";
                 while ((line = br.readLine()) != null) {
-                    sb.append(line + "\n");
+                    if (line.length() > 4 && line.substring(0,5).equals("route")) {
+                        color = line.substring(6);
+                    } else if (color.equals("blue")) {
+                        sb.append(line + "\n");
+                    }
                 }
                 data = sb.toString();
                 br.close();
